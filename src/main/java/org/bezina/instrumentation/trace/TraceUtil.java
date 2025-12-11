@@ -1,0 +1,41 @@
+package org.bezina.instrumentation.trace;
+
+import io.opentelemetry.api.OpenTelemetry;
+import io.opentelemetry.api.trace.Span;
+import io.opentelemetry.api.trace.StatusCode;
+import io.opentelemetry.api.trace.Tracer;
+import org.bezina.instrumentation.CommonUtil;
+import org.bezina.instrumentation.OpenTelemetryConfig;
+
+import java.util.function.Consumer;
+import java.util.function.Function;
+
+public class TraceUtil {
+    private static final Tracer tracer = OpenTelemetryConfig.tracer(TraceUtil.class);
+
+    public static void trace(String spanName, Consumer<Span> consumer) {
+        trace(spanName, (Span span) ->{
+            consumer.accept(span);
+            return null;
+        });
+    }
+
+    public static <T> T trace(String spanName, Function<Span,T> function)  {
+        var span = tracer.spanBuilder(spanName)
+                .startSpan();
+        try(var scope = span.makeCurrent()){
+//            CommonUtil.sleepMillis(150);
+//            span.setAttribute("payment.method", "CREDIT_CARD");
+ //           instead use function
+            var t = function.apply(span);
+            span.setStatus(StatusCode.OK);
+            return t;
+        } catch (Exception e) {
+            span.recordException(e);
+            span.setStatus(StatusCode.ERROR);
+            return null;
+        }finally {
+            span.end();
+        }
+    }
+}
