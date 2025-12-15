@@ -24,7 +24,7 @@ public class Lec03ExplicitParentChildDemo {
         var span = tracer.spanBuilder("processOrder")
                 .setNoParent()
                 .startSpan();
-        try{
+        try {
             processPayment(span);
             Thread.ofPlatform().start(() -> deductInventory(span));
             Thread.ofVirtual().start(() -> deductInventory(span));
@@ -39,39 +39,39 @@ public class Lec03ExplicitParentChildDemo {
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }
 
     private void processPayment(Span parentSpan) {
         var span = tracer.spanBuilder("processPayment")
-                            .setParent(Context.current().with(parentSpan))
-                            .startSpan();
-        try{
+                .setParent(Context.current().with(parentSpan))
+                .startSpan();
+        try {
             CommonUtil.sleepMillis(150);
             span.setAttribute("payment.method", "CREDIT_CARD");
             span.setStatus(StatusCode.OK);
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }
 
     private void deductInventory(Span parentSpan) {
         var span = tracer.spanBuilder("deductInventory")
-                         .setParent(Context.current().with(parentSpan))
-                         .startSpan();
+                .setParent(Context.current().with(parentSpan))
+                .startSpan();
         try {
-          //  sendNotification();
+            //  sendNotification();
             CommonUtil.sleepMillis(125);
             span.setStatus(StatusCode.OK);
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }
@@ -80,13 +80,13 @@ public class Lec03ExplicitParentChildDemo {
         var span = tracer.spanBuilder("sendNotification")
                 .setParent(Context.current().with(parentSpan))
                 .startSpan();
-        try{
+        try {
             CommonUtil.sleepMillis(100);
             span.setStatus(StatusCode.OK);
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }

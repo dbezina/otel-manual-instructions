@@ -20,9 +20,9 @@ public class Lec03GaugeDemo {
     }
 
     // This method is only for demonstrating the JVM memory gauge
-    private static void simulateMemoryUsage(){
+    private static void simulateMemoryUsage() {
         var memory = new ArrayList<byte[]>();
-        for (int i = 1; i <= 10_000 ; i++) {
+        for (int i = 1; i <= 10_000; i++) {
             // allocate ~10MB each iteration
             memory.add(new byte[1024 * 1024 * 10]);
             LOG.info("allocated {} MB", memory.size() * 10);
@@ -30,7 +30,7 @@ public class Lec03GaugeDemo {
             CommonUtil.sleepSeconds(1);
 
             // Clear memory every minute to see the gauge drop
-            if(i % 60 == 0){
+            if (i % 60 == 0) {
                 LOG.info("clearing list / memory");
                 memory.clear();
                 //Note: System.gc() is only for demonstrating the gauge. Do not use in real apps.
@@ -40,6 +40,7 @@ public class Lec03GaugeDemo {
         }
 
     }
+
     // observable gauge that automatically reports JVM memory utilization
     private static ObservableLongGauge createJvmMemoryUsedGauge() {
         return meter.gaugeBuilder("jvm.memory.used")

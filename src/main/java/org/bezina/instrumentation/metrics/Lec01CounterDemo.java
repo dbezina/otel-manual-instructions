@@ -17,15 +17,17 @@ public class Lec01CounterDemo {
             controller.viewProduct();
         }
     }
+
     //like Spring Bean - Thread safe
-    private static LongCounter createProductViewCounter(){
+    private static LongCounter createProductViewCounter() {
         return meter.counterBuilder("app.product.view.count")
-               // .ofDoubles()
+                // .ofDoubles()
                 .setDescription("Total number of product view")
                 .setUnit("{view}")
                 .build();
 
     }
+
     private static class ProductController {
 
         private final LongCounter counter;
@@ -34,7 +36,7 @@ public class Lec01CounterDemo {
             this.counter = counter;
         }
 
-        public void viewProduct(){
+        public void viewProduct() {
             CommonUtil.sleepSeconds(1);
             this.counter.add(1);
         }

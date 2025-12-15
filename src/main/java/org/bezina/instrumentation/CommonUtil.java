@@ -13,7 +13,7 @@ public class CommonUtil {
         sleep(Duration.ofMillis(millis));
     }
 
-    public static void  sleep(Duration duration){
+    public static void sleep(Duration duration) {
         try {
             Thread.sleep(duration.toMillis());
         } catch (InterruptedException e) {

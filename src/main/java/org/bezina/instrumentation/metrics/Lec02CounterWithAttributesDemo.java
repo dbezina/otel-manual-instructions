@@ -18,13 +18,14 @@ public class Lec02CounterWithAttributesDemo {
         var controller = new ProductController(productViewRecorder);
 
         for (int i = 0; i < 10_000; i++) {
-            controller.viewProduct(ThreadLocalRandom.current().nextLong(1,4));
+            controller.viewProduct(ThreadLocalRandom.current().nextLong(1, 4));
         }
     }
+
     //like Spring Bean - Thread safe
-    private static LongCounter createProductViewCounter(){
+    private static LongCounter createProductViewCounter() {
         return meter.counterBuilder("app.product.view.count")
-               // .ofDoubles()
+                // .ofDoubles()
                 .setDescription("Total number of product view")
                 .setUnit("{view}")
                 .build();
@@ -41,12 +42,13 @@ public class Lec02CounterWithAttributesDemo {
             this.viewRecorder = viewRecorder;
         }
 
-        public void viewProduct(long productId){
+        public void viewProduct(long productId) {
             CommonUtil.sleepSeconds(1);
             this.viewRecorder.recordView(productId);
         }
 
     }
+
     //spring bean
     private static class ProductViewRecorder {
         private static final AttributeKey<Long> PRODUCT_ID_KEY = AttributeKey.longKey("productId");
@@ -55,8 +57,9 @@ public class Lec02CounterWithAttributesDemo {
         private ProductViewRecorder(LongCounter counter) {
             this.counter = counter;
         }
-        public void recordView(long productId){
-            this.counter.add(1, Attributes.of(PRODUCT_ID_KEY,productId));
+
+        public void recordView(long productId) {
+            this.counter.add(1, Attributes.of(PRODUCT_ID_KEY, productId));
         }
 
     }

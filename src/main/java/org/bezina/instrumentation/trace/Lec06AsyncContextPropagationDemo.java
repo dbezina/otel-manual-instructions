@@ -1,4 +1,5 @@
 package org.bezina.instrumentation.trace;
+
 import org.bezina.instrumentation.CommonUtil;
 
 import io.opentelemetry.context.Context;
@@ -17,8 +18,8 @@ public class Lec06AsyncContextPropagationDemo {
     }
 
     private void processOrder() {
-        TraceUtil.trace("processOrder",span -> {
-      //      Context.current().wrap(this::processOrder); consumes and returns runnable
+        TraceUtil.trace("processOrder", span -> {
+            //      Context.current().wrap(this::processOrder); consumes and returns runnable
             var t1 = Thread.ofVirtual().start(Context.current().wrap(this::processPayment));
             var t2 = Thread.ofVirtual().start(Context.current().wrap(this::deductInventory));
             var t3 = Thread.ofVirtual().start(Context.current().wrap(this::sendNotification));
@@ -32,7 +33,7 @@ public class Lec06AsyncContextPropagationDemo {
     }
 
     private void processPayment() {
-        TraceUtil.trace("processPayment",span -> {
+        TraceUtil.trace("processPayment", span -> {
             CommonUtil.sleepMillis(150);
             span.addEvent("Payment failed.... retry");
             CommonUtil.sleepMillis(150);
@@ -41,13 +42,13 @@ public class Lec06AsyncContextPropagationDemo {
     }
 
     private void deductInventory() {
-        TraceUtil.trace("deductInventory",span -> {
+        TraceUtil.trace("deductInventory", span -> {
             CommonUtil.sleepMillis(125);
         });
     }
 
     private void sendNotification() {
-        TraceUtil.trace("sendNotification",span -> {
+        TraceUtil.trace("sendNotification", span -> {
             CommonUtil.sleepMillis(100);
         });
     }

@@ -14,19 +14,19 @@ public class TraceUtil {
     private static final Tracer tracer = OpenTelemetryConfig.tracer(TraceUtil.class);
 
     public static void trace(String spanName, Consumer<Span> consumer) {
-        trace(spanName, (Span span) ->{
+        trace(spanName, (Span span) -> {
             consumer.accept(span);
             return null;
         });
     }
 
-    public static <T> T trace(String spanName, Function<Span,T> function)  {
+    public static <T> T trace(String spanName, Function<Span, T> function) {
         var span = tracer.spanBuilder(spanName)
                 .startSpan();
-        try(var scope = span.makeCurrent()){
+        try (var scope = span.makeCurrent()) {
 //            CommonUtil.sleepMillis(150);
 //            span.setAttribute("payment.method", "CREDIT_CARD");
- //           instead use function
+            //           instead use function
             var t = function.apply(span);
             span.setStatus(StatusCode.OK);
             return t;
@@ -34,7 +34,7 @@ public class TraceUtil {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
             return null;
-        }finally {
+        } finally {
             span.end();
         }
     }

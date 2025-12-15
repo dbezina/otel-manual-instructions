@@ -1,4 +1,5 @@
 package org.bezina.instrumentation.trace;
+
 import org.bezina.instrumentation.CommonUtil;
 
 
@@ -15,7 +16,7 @@ public class Lec04TraceRefactorDemo {
     }
 
     private void processOrder() {
-        TraceUtil.trace("processOrder",span -> {
+        TraceUtil.trace("processOrder", span -> {
             processPayment();
             deductInventory();
             sendNotification();
@@ -26,20 +27,20 @@ public class Lec04TraceRefactorDemo {
     }
 
     private void processPayment() {
-        TraceUtil.trace("processPayment",span -> {
+        TraceUtil.trace("processPayment", span -> {
             CommonUtil.sleepMillis(150);
             span.setAttribute("payment.method", "CREDIT_CARD");
         });
     }
 
     private void deductInventory() {
-        TraceUtil.trace("deductInventory",span -> {
+        TraceUtil.trace("deductInventory", span -> {
             CommonUtil.sleepMillis(125);
         });
     }
 
     private void sendNotification() {
-        TraceUtil.trace("sendNotification",span -> {
+        TraceUtil.trace("sendNotification", span -> {
             CommonUtil.sleepMillis(100);
         });
     }

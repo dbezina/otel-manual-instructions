@@ -21,7 +21,7 @@ public class Lec02ParentChildDemo {
     private void processOrder() {
         var span = tracer.spanBuilder("processOrder")
                 .startSpan();
-        try(var scope = span.makeCurrent()){
+        try (var scope = span.makeCurrent()) {
             processPayment();
             deductInventory();
             //    sendNotification();
@@ -33,7 +33,7 @@ public class Lec02ParentChildDemo {
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }
@@ -41,14 +41,14 @@ public class Lec02ParentChildDemo {
     private void processPayment() {
         var span = tracer.spanBuilder("processPayment")
                 .startSpan();
-        try(var scope = span.makeCurrent()){
+        try (var scope = span.makeCurrent()) {
             CommonUtil.sleepMillis(150);
             span.setAttribute("payment.method", "CREDIT_CARD");
             span.setStatus(StatusCode.OK);
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }
@@ -56,15 +56,14 @@ public class Lec02ParentChildDemo {
     private void deductInventory() {
         var span = tracer.spanBuilder("deductInventory")
                 .startSpan();
-        try(var scope = span.makeCurrent())
-        {
+        try (var scope = span.makeCurrent()) {
             sendNotification();
             CommonUtil.sleepMillis(125);
             span.setStatus(StatusCode.OK);
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }
@@ -72,13 +71,13 @@ public class Lec02ParentChildDemo {
     private void sendNotification() {
         var span = tracer.spanBuilder("sendNotification")
                 .startSpan();
-        try{
+        try {
             CommonUtil.sleepMillis(100);
             span.setStatus(StatusCode.OK);
         } catch (Exception e) {
             span.recordException(e);
             span.setStatus(StatusCode.ERROR);
-        }finally {
+        } finally {
             span.end();
         }
     }

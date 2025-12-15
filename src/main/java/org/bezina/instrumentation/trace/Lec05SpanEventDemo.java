@@ -1,4 +1,5 @@
 package org.bezina.instrumentation.trace;
+
 import org.bezina.instrumentation.CommonUtil;
 
 
@@ -15,7 +16,7 @@ public class Lec05SpanEventDemo {
     }
 
     private void processOrder() {
-        TraceUtil.trace("processOrder",span -> {
+        TraceUtil.trace("processOrder", span -> {
             processPayment();
             deductInventory();
             sendNotification();
@@ -26,7 +27,7 @@ public class Lec05SpanEventDemo {
     }
 
     private void processPayment() {
-        TraceUtil.trace("processPayment",span -> {
+        TraceUtil.trace("processPayment", span -> {
             CommonUtil.sleepMillis(150);
             span.addEvent("Payment failed.... retry");
             CommonUtil.sleepMillis(150);
@@ -35,13 +36,13 @@ public class Lec05SpanEventDemo {
     }
 
     private void deductInventory() {
-        TraceUtil.trace("deductInventory",span -> {
+        TraceUtil.trace("deductInventory", span -> {
             CommonUtil.sleepMillis(125);
         });
     }
 
     private void sendNotification() {
-        TraceUtil.trace("sendNotification",span -> {
+        TraceUtil.trace("sendNotification", span -> {
             CommonUtil.sleepMillis(100);
         });
     }
