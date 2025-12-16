@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9aa33fec-cfea-4d21-9eac-3fa7df3ad6d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/collector-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/grafana/dashboards/dashboards.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/grafana/dashboards/logs-dashboard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/grafana/dashboards/metrics-dashboard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/grafana/dashboards/traces-dashboard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/grafana/datasources/datasources.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/loki.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/otel/opentelemetry-config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/prometheus.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-starter/observability-infrastructure/docker-volume/tempo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/controller/ActorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/controller/ActorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/controller/advice/ApplicationErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/controller/advice/ApplicationErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/dto/ActorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/dto/ActorDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/entity/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/entity/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/exception/ActorNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/exception/ActorNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/mapper/EntityDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/mapper/EntityDtoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/repository/ActorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/repository/ActorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/service/ActorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/java/org/bezina/actor/service/ActorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/actor-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/src/main/java/org/bezina/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/src/main/java/org/bezina/movie/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/controller/advice/ApplicationErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/controller/advice/ApplicationErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/dto/ReviewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/dto/ReviewDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/entity/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/mapper/EntityDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/mapper/EntityDtoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/repository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/java/org/bezina/review/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/CommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/OpenTelemetryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/logs/Lec01MDCDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/logs/Lec02TurboFilterDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/logs/PaymentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/logs/TurboDebugFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/metrics/Lec01CounterDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/metrics/Lec02CounterWithAttributesDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/metrics/Lec03GaugeDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/metrics/Lec04UpDownCounterDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/metrics/Lec05HistogramDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/Lec01SpanBasicsDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/Lec02ParentChildDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/Lec03ExplicitParentChildDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/Lec04TraceRefactorDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/Lec05SpanEventDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/Lec06AsyncContextPropagationDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bezina/instrumentation/trace/TraceUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dbezina&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:dbezina/otel-manual-instructions.git&quot;,
+    &quot;accountId&quot;: &quot;cc3e7aa4-f236-40b6-941b-0f01c2f375ad&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="36sgjGR0BbHY6vUR5tx43DVLhLH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ActorServiceApplication.executor": "Run",
+    "Application.Lec01CounterDemo.executor": "Run",
+    "Application.Lec01MDCDemo.executor": "Run",
+    "Application.Lec02ParentChildDemo.executor": "Run",
+    "Application.Lec02TurboFilterDemo.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MovieServiceApplication.executor": "Run",
+    "Application.ReviewServiceApplication.executor": "Run",
+    "Application.main.java.org.bezina.actor.ActorServiceApplication.executor": "Run",
+    "Application.org.bezina.actor.ActorServiceApplication.executor": "Run",
+    "Application.org.bezina.movie.MovieServiceApplication.executor": "Run",
+    "Application.org.bezina.review.ReviewServiceApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/d.bezina/IdeaProjects/my-projects/telemetry-playground",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d.bezina\IdeaProjects\my-projects\telemetry-playground\spring-boot-starter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.org.bezina.movie.MovieServiceApplication">
+    <configuration name="MovieServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vinsguru.movie.MovieServiceApplication" />
+      <module name="trace-flix" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vinsguru.movie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.org.bezina.review.ReviewServiceApplication" />
+      <module name="review-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.org.bezina.review.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.bezina.actor.ActorServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.bezina.actor.ActorServiceApplication" />
+      <module name="actor-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bezina.actor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.bezina.movie.MovieServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.bezina.movie.MovieServiceApplication" />
+      <module name="movie-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bezina.movie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.bezina.review.ReviewServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.bezina.review.ReviewServiceApplication" />
+      <module name="review-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bezina.review.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.org.bezina.review.ReviewServiceApplication" />
+      <item itemvalue="Application.MovieServiceApplication" />
+      <item itemvalue="Application.ReviewServiceApplication" />
+      <item itemvalue="Application.org.bezina.actor.ActorServiceApplication" />
+      <item itemvalue="Application.org.bezina.movie.MovieServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.org.bezina.movie.MovieServiceApplication" />
+        <item itemvalue="Application.org.bezina.actor.ActorServiceApplication" />
+        <item itemvalue="Application.org.bezina.review.ReviewServiceApplication" />
+        <item itemvalue="Application.ReviewServiceApplication" />
+        <item itemvalue="Application.MovieServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9aa33fec-cfea-4d21-9eac-3fa7df3ad6d5" name="Changes" comment="" />
+      <created>1765800825269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765800825269</updated>
+    </task>
+    <servers />
+  </component>
+</project>

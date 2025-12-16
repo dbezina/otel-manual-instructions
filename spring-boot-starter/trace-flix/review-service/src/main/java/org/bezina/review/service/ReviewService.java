@@ -1,8 +1,9 @@
-package main.java.org.bezina.review.service;
+package org.bezina.review.service;
 
-import main.java.org.bezina.review.dto.ReviewDto;
-import main.java.org.bezina.review.mapper.EntityDtoMapper;
-import main.java.org.bezina.review.repository.ReviewRepository;
+
+import org.bezina.review.dto.ReviewDto;
+import org.bezina.review.mapper.EntityDtoMapper;
+import org.bezina.review.repository.ReviewRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

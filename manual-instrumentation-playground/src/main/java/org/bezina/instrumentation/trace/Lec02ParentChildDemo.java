@@ -6,7 +6,8 @@ import org.bezina.instrumentation.CommonUtil;
 import org.bezina.instrumentation.OpenTelemetryConfig;
 
 public class Lec02ParentChildDemo {
-    private static final Tracer tracer = OpenTelemetryConfig.tracer(Lec02ParentChildDemo.class);
+    private static final Tracer tracer =
+            OpenTelemetryConfig.tracer(Lec02ParentChildDemo.class);
 
     public static void main(String[] args) {
 

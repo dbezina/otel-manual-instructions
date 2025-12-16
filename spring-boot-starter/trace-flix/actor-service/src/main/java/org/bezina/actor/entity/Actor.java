@@ -1,4 +1,4 @@
-package com.vinsguru.actor.entity;
+package org.bezina.actor.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

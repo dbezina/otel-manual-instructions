@@ -1,4 +1,4 @@
-package com.vinsguru.actor.exception;
+package org.bezina.actor.exception;
 
 public class ActorNotFoundException extends RuntimeException {
 

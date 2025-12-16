@@ -1,7 +1,8 @@
-package com.vinsguru.actor.mapper;
+package org.bezina.actor.mapper;
 
-import com.vinsguru.actor.dto.ActorDto;
-import com.vinsguru.actor.entity.Actor;
+
+import org.bezina.actor.dto.ActorDto;
+import org.bezina.actor.entity.Actor;
 
 public class EntityDtoMapper {
 

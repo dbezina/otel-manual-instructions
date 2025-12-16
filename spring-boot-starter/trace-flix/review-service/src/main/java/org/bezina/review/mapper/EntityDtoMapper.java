@@ -1,7 +1,8 @@
-package main.java.org.bezina.review.mapper;
+package org.bezina.review.mapper;
 
-import main.java.org.bezina.review.dto.ReviewDto;
-import main.java.org.bezina.review.entity.Review;
+
+import org.bezina.review.dto.ReviewDto;
+import org.bezina.review.entity.Review;
 
 public class EntityDtoMapper {
 

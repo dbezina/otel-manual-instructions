@@ -9,7 +9,7 @@ import org.bezina.instrumentation.OpenTelemetryConfig;
 public class Lec01CounterDemo {
     private static final Meter meter = OpenTelemetryConfig.meter(Lec01CounterDemo.class);
 
-    public static void main() {
+    public static void main(String[] args) {
         var counter = createProductViewCounter();
         var controller = new ProductController(counter);
 

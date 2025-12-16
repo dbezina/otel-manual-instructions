@@ -1,10 +1,13 @@
-package com.vinsguru.actor.service;
+package org.bezina.actor.service;
 
-import com.vinsguru.actor.dto.ActorDto;
-import com.vinsguru.actor.mapper.EntityDtoMapper;
-import com.vinsguru.actor.repository.ActorRepository;
+
+
+import org.bezina.actor.dto.ActorDto;
+import org.bezina.actor.mapper.EntityDtoMapper;
+import org.bezina.actor.repository.ActorRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,6 +34,10 @@ public class ActorService {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+    public Optional<List<ActorDto>> getActors() {
+        return Optional.of(this.actorRepository.findAll()
+                .stream().map(EntityDtoMapper::toDto).toList());
     }
 
 }

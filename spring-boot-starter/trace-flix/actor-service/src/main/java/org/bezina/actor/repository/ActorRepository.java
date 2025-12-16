@@ -1,6 +1,7 @@
-package com.vinsguru.actor.repository;
+package org.bezina.actor.repository;
 
-import com.vinsguru.actor.entity.Actor;
+
+import org.bezina.actor.entity.Actor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

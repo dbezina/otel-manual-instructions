@@ -1,6 +1,7 @@
-package com.vinsguru.actor.controller.advice;
+package org.bezina.actor.controller.advice;
 
-import com.vinsguru.actor.exception.ActorNotFoundException;
+
+import org.bezina.actor.exception.ActorNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

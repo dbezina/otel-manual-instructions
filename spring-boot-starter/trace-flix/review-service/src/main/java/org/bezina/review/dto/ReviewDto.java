@@ -1,4 +1,4 @@
-package main.java.org.bezina.review.dto;
+package org.bezina.review.dto;
 
 public record ReviewDto(Integer id,
                         Integer rating,

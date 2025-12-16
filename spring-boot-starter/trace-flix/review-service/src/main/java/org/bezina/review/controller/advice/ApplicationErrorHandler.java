@@ -1,4 +1,4 @@
-package main.java.org.bezina.review.controller.advice;
+package org.bezina.review.controller.advice;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

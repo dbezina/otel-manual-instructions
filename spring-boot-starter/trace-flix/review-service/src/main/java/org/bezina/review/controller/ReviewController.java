@@ -1,7 +1,8 @@
-package main.java.org.bezina.review.controller;
+package org.bezina.review.controller;
 
-import main.java.org.bezina.review.dto.ReviewDto;
-import main.java.org.bezina.review.service.ReviewService;
+
+import org.bezina.review.dto.ReviewDto;
+import org.bezina.review.service.ReviewService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +27,12 @@ public class ReviewController {
     @GetMapping("/api/reviews")
     public List<ReviewDto> getReviews(@RequestParam Integer movieId, @RequestHeader Map<String, String> headers){
         log.info("request received for movie id: {}, headers: {}", movieId, headers);
-        return this.reviewService.getReviews(movieId);
+        try{
+            return this.reviewService.getReviews(movieId);
+        }catch (Exception e){
+            log.error(e.getMessage());
+            return  null;
+        }
     }
 
 }

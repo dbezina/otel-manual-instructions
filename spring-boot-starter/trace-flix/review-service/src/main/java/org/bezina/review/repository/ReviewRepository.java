@@ -1,6 +1,7 @@
-package main.java.org.bezina.review.repository;
+package org.bezina.review.repository;
 
-import main.java.org.bezina.review.entity.Review;
+
+import org.bezina.review.entity.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package main.java.org.bezina.review.entity;
+package org.bezina.review.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
