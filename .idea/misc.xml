@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/spring-boot-starter/trace-flix/movie-service/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-starter/trace-flix/review-service/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-starter/trace-flix/pom.xml" />
+        <option value="$PROJECT_DIR$/on-demand/trace-flix/on-demand-observability/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
